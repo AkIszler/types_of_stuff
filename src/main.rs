@@ -48,8 +48,19 @@ fn main() {
    }
    else {                                       // wont trigger because the above statement is true
        println!("the number us {}", num2)
-   } 
+   }
 
+
+    let condition = true;
+    let number = if condition { 5 } else { 6 }; // because condition is true the first will trigger
+
+    println!("The value of number is: {number}"); 
+
+
+    let condition1 = false;     
+    let number1 = if condition1 { 5 } else { 6 };   // by making it false it will trigger the else
+
+    println!("The value of number is: {number1}");
 }
 
 fn another_function(x: i32) {
