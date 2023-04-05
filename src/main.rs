@@ -61,7 +61,55 @@ fn main() {
     let number1 = if condition1 { 5 } else { 6 };   // by making it false it will trigger the else
 
     println!("The value of number is: {number1}");
+
+
+      let mut counter = 0;
+
+    let result = loop {  // this is a loop that will count from 1 to 10
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2; // loop will break here after multipling the 10 by 20
+        }
+    };
+
+    println!("The result is {result}");    // result is 20
+
+
+      let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+    println!("End count = {count}");
+
+
+        let mut number = 10;
+
+    while number != 0 {         // springs a countdown to liftoff
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
 }
+
+
+
 
 fn another_function(x: i32) {
     println!("The value of x is: {x}");
